@@ -166,7 +166,7 @@ class ApplicationController < Sinatra::Base
   end
 
 # DISPLAY SINGLE TWEET
-  get '/users/:id/tweets/:id' do
+  get '/tweets/:id' do
     #display a single tweet & its attributes
   end
 

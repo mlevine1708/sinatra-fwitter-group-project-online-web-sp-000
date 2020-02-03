@@ -200,7 +200,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-get '/search' do
+  get '/search' do
   @search_result = Tweet.where("tweets.text like ?", "%#{params[:q]}%").includes(:user)
   if @search_result.empty?
     p "No results"

@@ -201,11 +201,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/search' do
-  @search_result = Tweet.where("tweets.text like ?", "%#{params[:q]}%").includes(:user)
-  if @search_result.empty?
-    p "No results"
-  else
-    erb :"users/search"
+    @search_result = Tweet.where("tweets.text like ?", "%#{params[:q]}%").includes(:user)
+    if @search_result.empty?
+      p "No results"
+    else
+      erb :"users/search"
+    end
   end
 
 
@@ -219,3 +220,5 @@ class ApplicationController < Sinatra::Base
       @error = "User does not exist"
       erb :'error'
     end
+
+end

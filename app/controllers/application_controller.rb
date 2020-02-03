@@ -208,7 +208,6 @@ get '/search' do
     erb :"users/search"
   end
 
-end
 
 # THROUGH USERNAME
   get '/:username' do

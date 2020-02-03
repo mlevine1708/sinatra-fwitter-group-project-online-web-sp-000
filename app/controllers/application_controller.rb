@@ -169,6 +169,7 @@ class ApplicationController < Sinatra::Base
   get '/tweets/:id' do
     #display a single tweet & its attributes
   end
+end 
 
 # DELETE TWEET
   delete '/tweets/:id' do

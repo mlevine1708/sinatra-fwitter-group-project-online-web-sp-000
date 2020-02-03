@@ -219,5 +219,3 @@ class ApplicationController < Sinatra::Base
       @error = "User does not exist"
       erb :'error'
     end
-
-
